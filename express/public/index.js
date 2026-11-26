@@ -213,38 +213,38 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _client = require("react-dom/client");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _typeChooser = require("./components/TypeChooser");
+var _typeChooserDefault = parcelHelpers.interopDefault(_typeChooser);
 function App() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "Hello, React!"
-            }, void 0, false, {
-                fileName: "src/index.js",
-                lineNumber: 7,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: "Welcome to the world of React!"
+                children: "Bored Activity App"
             }, void 0, false, {
                 fileName: "src/index.js",
                 lineNumber: 8,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _typeChooserDefault.default), {}, void 0, false, {
+                fileName: "src/index.js",
+                lineNumber: 9,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/index.js",
-        lineNumber: 6,
+        lineNumber: 7,
         columnNumber: 5
     }, this);
 }
 const root = (0, _client.createRoot)(document.getElementById('root'));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 14,
+    lineNumber: 15,
     columnNumber: 13
 }, undefined));
 
-},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iTorj":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./components/TypeChooser":"e8snM"}],"iTorj":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -18586,6 +18586,46 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["8lqZg"], "8lqZg", "parcelRequire77dd", {})
+},{}],"e8snM":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+function TypeChooser() {
+    const [types, setTypes] = (0, _react.useState)([
+        'education',
+        'recreational',
+        'social',
+        'diy',
+        'charity',
+        'cooking',
+        'relaxation',
+        'music',
+        'busywork'
+    ]);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+        children: types.map((type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                    href: "#",
+                    children: type
+                }, void 0, false, {
+                    fileName: "src/components/TypeChooser.js",
+                    lineNumber: 19,
+                    columnNumber: 11
+                }, this)
+            }, type, false, {
+                fileName: "src/components/TypeChooser.js",
+                lineNumber: 18,
+                columnNumber: 9
+            }, this))
+    }, void 0, false, {
+        fileName: "src/components/TypeChooser.js",
+        lineNumber: 16,
+        columnNumber: 5
+    }, this);
+}
+exports.default = TypeChooser;
+
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["8lqZg"], "8lqZg", "parcelRequire77dd", {})
 
 //# sourceMappingURL=index.js.map
