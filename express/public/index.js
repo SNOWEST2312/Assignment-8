@@ -18652,9 +18652,11 @@ var _react = require("react");
 function Activity(props) {
     const [activity, setActivity] = (0, _react.useState)(null);
     const [refreshCount, setRefresCount] = (0, _react.useState)(0);
+    const [isLoading, setIsLoading] = (0, _react.useState)(false);
     (0, _react.useEffect)(()=>{
         if (props.type) {
             async function loadActivity() {
+                setIsLoading(true);
                 const response = await fetch(`https://www.boredapi.com/api/activity?type=${props.type}`);
                 const data = await response.json();
                 setActivity(data);
@@ -18662,15 +18664,40 @@ function Activity(props) {
             loadActivity();
         }
     }, [
-        props.type
+        props.type,
+        refreshCount
     ]);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-        children: activity ? activity.activity : 'No activity available'
-    }, void 0, false, {
-        fileName: "src/components/Activity.js",
-        lineNumber: 17,
-        columnNumber: 10
-    }, this);
+    (0, _react.useEffect)(()=>{
+        if (activity) setIsLoading(false);
+    }, [
+        activity
+    ]);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: activity ? activity.activity : 'No activity available'
+            }, void 0, false, {
+                fileName: "src/components/Activity.js",
+                lineNumber: 28,
+                columnNumber: 7
+            }, this),
+            props.type && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: ()=>setRefresCount(refreshCount + 1),
+                children: "Get another activity"
+            }, void 0, false, {
+                fileName: "src/components/Activity.js",
+                lineNumber: 30,
+                columnNumber: 9
+            }, this),
+            isLoading && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "loading..."
+            }, void 0, false, {
+                fileName: "src/components/Activity.js",
+                lineNumber: 32,
+                columnNumber: 21
+            }, this)
+        ]
+    }, void 0, true);
 }
 exports.default = Activity;
 
