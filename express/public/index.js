@@ -215,14 +215,23 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 function App() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: "Hello, React!"
-        }, void 0, false, {
-            fileName: "src/index.js",
-            lineNumber: 7,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Hello, React!"
+            }, void 0, false, {
+                fileName: "src/index.js",
+                lineNumber: 7,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Welcome to the world of React!"
+            }, void 0, false, {
+                fileName: "src/index.js",
+                lineNumber: 8,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
         fileName: "src/index.js",
         lineNumber: 6,
         columnNumber: 5
@@ -231,7 +240,7 @@ function App() {
 const root = (0, _client.createRoot)(document.getElementById('root'));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 13,
+    lineNumber: 14,
     columnNumber: 13
 }, undefined));
 
