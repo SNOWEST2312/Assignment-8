@@ -216,31 +216,32 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _typeChooser = require("./components/TypeChooser");
 var _typeChooserDefault = parcelHelpers.interopDefault(_typeChooser);
 function App() {
+    const [selectedType, setSelectedType] = (0, _react.useState)(null);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 children: "Bored Activity App"
             }, void 0, false, {
                 fileName: "src/index.js",
-                lineNumber: 8,
+                lineNumber: 9,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _typeChooserDefault.default), {}, void 0, false, {
                 fileName: "src/index.js",
-                lineNumber: 9,
+                lineNumber: 10,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/index.js",
-        lineNumber: 7,
+        lineNumber: 8,
         columnNumber: 5
     }, this);
 }
 const root = (0, _client.createRoot)(document.getElementById('root'));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 15,
+    lineNumber: 16,
     columnNumber: 13
 }, undefined));
 
