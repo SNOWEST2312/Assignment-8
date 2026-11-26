@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 function Activity(props) {
   const [activity, setActivity] = useState(null);
+  const [refreshCount, setRefresCount] = useState(0);
   useEffect(() => {
     if (props.type) {
       async function loadActivity() {

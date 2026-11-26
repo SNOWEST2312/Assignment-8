@@ -18651,6 +18651,7 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 function Activity(props) {
     const [activity, setActivity] = (0, _react.useState)(null);
+    const [refreshCount, setRefresCount] = (0, _react.useState)(0);
     (0, _react.useEffect)(()=>{
         if (props.type) {
             async function loadActivity() {
@@ -18667,7 +18668,7 @@ function Activity(props) {
         children: activity ? activity.activity : 'No activity available'
     }, void 0, false, {
         fileName: "src/components/Activity.js",
-        lineNumber: 16,
+        lineNumber: 17,
         columnNumber: 10
     }, this);
 }
