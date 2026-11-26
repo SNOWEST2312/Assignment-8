@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function TypeChooser() {
+function TypeChooser(props) {
   const [types, setTypes] = useState([
     'education',
     'recreational',
@@ -16,9 +16,17 @@ function TypeChooser() {
     <ul>
       {types.map((type) => (
         <li key={type}>
-          <a href="#">{type}</a>
+          <a
+            href="#"
+            onClick={(event) => {
+              event.preventDefault();
+              props.onSelectType(type);
+            }}
+          >
+            {type}
+          </a>
         </li>
-      ))} 
+      ))}
     </ul>
   );
 }

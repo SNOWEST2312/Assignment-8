@@ -210,12 +210,16 @@
 })({"8lqZg":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _client = require("react-dom/client");
 var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
+var _client = require("react-dom/client");
+var _activity = require("./components/Activity");
+var _activityDefault = parcelHelpers.interopDefault(_activity);
 var _typeChooser = require("./components/TypeChooser");
 var _typeChooserDefault = parcelHelpers.interopDefault(_typeChooser);
 function App() {
+    function selectType(type) {
+        setSelectedType(type);
+    }
     const [selectedType, setSelectedType] = (0, _react.useState)(null);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
@@ -223,29 +227,38 @@ function App() {
                 children: "Bored Activity App"
             }, void 0, false, {
                 fileName: "src/index.js",
-                lineNumber: 9,
+                lineNumber: 13,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _typeChooserDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _activityDefault.default), {
+                type: selectedType
+            }, void 0, false, {
                 fileName: "src/index.js",
-                lineNumber: 10,
+                lineNumber: 14,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _typeChooserDefault.default), {
+                onSelectType: selectType
+            }, void 0, false, {
+                fileName: "src/index.js",
+                lineNumber: 15,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/index.js",
-        lineNumber: 8,
+        lineNumber: 12,
         columnNumber: 5
     }, this);
 }
 const root = (0, _client.createRoot)(document.getElementById('root'));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 16,
+    lineNumber: 21,
     columnNumber: 13
 }, undefined));
 
-},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./components/TypeChooser":"e8snM"}],"iTorj":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","react":"21dqq","./components/TypeChooser":"e8snM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./components/Activity":"dZmoK"}],"iTorj":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -18557,7 +18570,51 @@ module.exports = require("b0f0e6b9e8349dac");
     "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
 })();
 
-},{"6f0162e9ab224cd4":"21dqq"}],"gkKU3":[function(require,module,exports,__globalThis) {
+},{"6f0162e9ab224cd4":"21dqq"}],"e8snM":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+function TypeChooser(props) {
+    const [types, setTypes] = (0, _react.useState)([
+        'education',
+        'recreational',
+        'social',
+        'diy',
+        'charity',
+        'cooking',
+        'relaxation',
+        'music',
+        'busywork'
+    ]);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+        children: types.map((type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                    href: "#",
+                    onClick: (event)=>{
+                        event.preventDefault();
+                        props.onSelectType(type);
+                    },
+                    children: type
+                }, void 0, false, {
+                    fileName: "src/components/TypeChooser.js",
+                    lineNumber: 19,
+                    columnNumber: 11
+                }, this)
+            }, type, false, {
+                fileName: "src/components/TypeChooser.js",
+                lineNumber: 18,
+                columnNumber: 9
+            }, this))
+    }, void 0, false, {
+        fileName: "src/components/TypeChooser.js",
+        lineNumber: 16,
+        columnNumber: 5
+    }, this);
+}
+exports.default = TypeChooser;
+
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports,__globalThis) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -18587,46 +18644,35 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"e8snM":[function(require,module,exports,__globalThis) {
+},{}],"dZmoK":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-function TypeChooser() {
-    const [types, setTypes] = (0, _react.useState)([
-        'education',
-        'recreational',
-        'social',
-        'diy',
-        'charity',
-        'cooking',
-        'relaxation',
-        'music',
-        'busywork'
+function Activity(props) {
+    const [activity, setActivity] = (0, _react.useState)(null);
+    (0, _react.useEffect)(()=>{
+        if (props.type) {
+            async function loadActivity() {
+                const response = await fetch(`https://www.boredapi.com/api/activity?type=${props.type}`);
+                const data = await response.json();
+                setActivity(data);
+            }
+            loadActivity();
+        }
+    }, [
+        props.type
     ]);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-        children: types.map((type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                    href: "#",
-                    children: type
-                }, void 0, false, {
-                    fileName: "src/components/TypeChooser.js",
-                    lineNumber: 19,
-                    columnNumber: 11
-                }, this)
-            }, type, false, {
-                fileName: "src/components/TypeChooser.js",
-                lineNumber: 18,
-                columnNumber: 9
-            }, this))
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+        children: activity ? activity.activity : 'No activity available'
     }, void 0, false, {
-        fileName: "src/components/TypeChooser.js",
+        fileName: "src/components/Activity.js",
         lineNumber: 16,
-        columnNumber: 5
+        columnNumber: 10
     }, this);
 }
-exports.default = TypeChooser;
+exports.default = Activity;
 
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["8lqZg"], "8lqZg", "parcelRequire77dd", {})
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react":"21dqq"}]},["8lqZg"], "8lqZg", "parcelRequire77dd", {})
 
 //# sourceMappingURL=index.js.map
