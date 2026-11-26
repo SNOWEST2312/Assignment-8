@@ -12,7 +12,7 @@ function App() {
     <div>
       <h1>Bored Activity App</h1>
       <Activity type={selectedType} />
-      <TypeChooser onSelectType={selectType} />
+      <TypeChooser onSelectType={selectType} selectedType={selectedType} />
     </div>
   );
 }

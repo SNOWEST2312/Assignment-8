@@ -238,7 +238,8 @@ function App() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _typeChooserDefault.default), {
-                onSelectType: selectType
+                onSelectType: selectType,
+                selectedType: selectedType
             }, void 0, false, {
                 fileName: "src/index.js",
                 lineNumber: 15,
@@ -18587,6 +18588,9 @@ function TypeChooser(props) {
         'music',
         'busywork'
     ]);
+    const chosenStyle = {
+        backgroundColor: 'lightblue'
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
         children: types.map((type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -18595,20 +18599,21 @@ function TypeChooser(props) {
                         event.preventDefault();
                         props.onSelectType(type);
                     },
+                    style: props.selectedType === type ? chosenStyle : {},
                     children: type
                 }, void 0, false, {
                     fileName: "src/components/TypeChooser.js",
-                    lineNumber: 19,
+                    lineNumber: 22,
                     columnNumber: 11
                 }, this)
             }, type, false, {
                 fileName: "src/components/TypeChooser.js",
-                lineNumber: 18,
+                lineNumber: 21,
                 columnNumber: 9
             }, this))
     }, void 0, false, {
         fileName: "src/components/TypeChooser.js",
-        lineNumber: 16,
+        lineNumber: 19,
         columnNumber: 5
     }, this);
 }

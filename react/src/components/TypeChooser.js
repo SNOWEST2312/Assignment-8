@@ -12,6 +12,9 @@ function TypeChooser(props) {
     'music',
     'busywork',
   ]);
+
+  const chosenStyle = {backgroundColor: 'lightblue'};
+
   return (
     <ul>
       {types.map((type) => (
@@ -22,6 +25,7 @@ function TypeChooser(props) {
               event.preventDefault();
               props.onSelectType(type);
             }}
+            style={props.selectedType === type ? chosenStyle : {}}
           >
             {type}
           </a>
